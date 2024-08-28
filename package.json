@@ -1,0 +1,22 @@
+{
+	"name": "@rbxts/roquest",
+	"version": "1.0.0",
+	"description": "RoQuest is a sophisticated abstract implementation of a Quest System. ",
+	"keywords": ["roblox", "rbxts", "quest", "roquest"],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/christopher-buss/RoQuest"
+	},
+	"license": "Apache-2.0",
+	"author": "",
+	"main": "RoQuest/init.lua",
+	"devDependencies": {
+		"@isentinel/eslint-config": "0.7.7",
+		"@rbxts/compiler-types": "2.3.0-types.2",
+		"@rbxts/types": "1.0.802",
+		"eslint": "9.9.1",
+		"typescript": "5.5.4"
+	},
+	"packageManager": "pnpm@9.9.0",
+	"readme": "https://prooheckcp.github.io/RoQuest/"
+}
