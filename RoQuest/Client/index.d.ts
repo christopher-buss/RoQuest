@@ -18,7 +18,7 @@ import type Signal from "Vendor/Signal";
  * can be used to update the player's UI or any other client-sided behavior.
  *
  * ```ts
- * import { Client } from "@rbxts/ro-quest";
+ * import { RoQuestClient } from "@rbxts/roquest";
  * import { ReplicatedStorage } from "@rbxts/services";
  *
  * RoQuest.Init();
@@ -60,7 +60,7 @@ interface RoQuestClient {
 	 * });
 	 * ```
 	 */
-	OnAvailableQuestChanged: Signal<[]>;
+	OnAvailableQuestChanged: Signal<void>;
 
 	/**
 	 * This gets called whenever the quests that are completed changes. This
@@ -76,7 +76,7 @@ interface RoQuestClient {
 	 * });
 	 * ```
 	 */
-	OnCompletedQuestChanged: Signal<[]>;
+	OnCompletedQuestChanged: Signal<void>;
 
 	/**
 	 * This gets called whenever the quests that are delivered changes. This
@@ -92,7 +92,7 @@ interface RoQuestClient {
 	 * });
 	 * ```
 	 */
-	OnDeliveredQuestChanged: Signal<[]>;
+	OnDeliveredQuestChanged: Signal<void>;
 
 	/**
 	 * This gets called whenever the quests that are in progress change. This
@@ -107,7 +107,7 @@ interface RoQuestClient {
 	 * });
 	 * ```
 	 */
-	OnInProgressQuestChanged: Signal<[]>;
+	OnInProgressQuestChanged: Signal<void>;
 
 	/**
 	 * Called whenever the player data gets changed. This should only happen
@@ -267,7 +267,7 @@ interface RoQuestClient {
 	 * });
 	 * ```
 	 */
-	OnUnAvailableQuestChanged: Signal<[]>;
+	OnUnAvailableQuestChanged: Signal<void>;
 
 	/** Reference to the Quest class. */
 	Quest: Quest;

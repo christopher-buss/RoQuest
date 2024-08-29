@@ -1,4 +1,4 @@
 {
-  "name": "roquest",
-  "tree": {"$path":"RoQuest"}
+	"name": "roquest",
+	"tree": { "$path": "out" }
 }

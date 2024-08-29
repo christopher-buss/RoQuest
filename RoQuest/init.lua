@@ -11,8 +11,8 @@ else
 end
 
 return setmetatable({
-    Client = Client,
-    Server = Server,
+    RoQuestClient = Client,
+    RoQuestServer = Server,
 }, {
     __index = function(_, key)
         if key == "Server" then

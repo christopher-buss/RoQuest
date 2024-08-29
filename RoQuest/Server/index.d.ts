@@ -17,6 +17,25 @@ import type Signal from "Vendor/Signal";
  * find a guide to that in the Docs section!
  */
 interface RoQuestServer {
+	/**
+	 * This function should only get called once in the server-side. It will
+	 * initialize our quest system and start listening to player events.
+	 *
+	 * Initiates our quest system and feeds it all the data about the quests and
+	 * life cycles.
+	 *
+	 * ```ts
+	 * import { ReplicatedStorage } from "@rbxts/services";
+	 * import { RoQuestServer, LoadDirectory } from "@rbxts/roquest";
+	 *
+	 * RoQuestServer.Init(LoadDirectory(ReplicatedStorage.Quests));
+	 * ```
+	 *
+	 * @param quests - Array of Quests.
+	 * @param lifeCycles - QuestLifeCycle?
+	 */
+	Init: (quests: Array<Quest>, lifeCycles?: QuestLifeCycle) => void;
+
 	/** This is a reference to our ObjectiveInfo class. */
 	ObjectiveInfo: ObjectiveInfo;
 
@@ -313,4 +332,10 @@ interface RoQuestServer {
 
 	/** This is a reference to our Signal class. */
 	QuestStatus: QuestStatus;
+
+	Test: number;
 }
+
+declare const RoQuestServer: RoQuestServer;
+
+export = RoQuestServer;
