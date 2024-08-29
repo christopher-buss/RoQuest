@@ -41,7 +41,7 @@ interface RoQuestClient {
 	 *
 	 * @param lifeCycles - {QuestLifeCycle}?
 	 */
-	Init: (lifeCycles?: QuestLifeCycle) => void;
+	Init(lifeCycles?: QuestLifeCycle): void;
 
 	/** Reference to the ObjectiveInfo class. */
 	ObjectiveInfo: ObjectiveInfo;

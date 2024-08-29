@@ -65,6 +65,7 @@ interface QuestLifeCycle {
 	 * @param updatedAmount
 	 */
 	OnObjectiveChange(objectiveId: string, updatedAmount: number): void;
+
 	/** Called when the player quest starts the quest. */
 	OnStart(): void;
 }

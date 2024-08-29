@@ -34,12 +34,6 @@ import type QuestObjective from "./QuestObjective";
  * ```
  */
 export interface Quest {
-	/** Cached value of our quest progress. */
-	_QuestProgress: QuestProgress;
-
-	/** Sets the quest progress. */
-	_SetQuestProgress(updatedQuestProgress: QuestProgress): void;
-
 	/** Adds to the objective of the quest by the amount specified. */
 	AddObjective(objectiveId: string, amount: number): void;
 

@@ -19,7 +19,7 @@ interface ObjectiveInfo {
 	 *
 	 * @param target - The target number of the objective.
 	 */
-	NewObjective: (target: number) => QuestObjective;
+	NewObjective(target: number): QuestObjective;
 
 	/**
 	 * This is an ID to represent the objective. Should be used to identify the

@@ -1,4 +1,9 @@
 {
 	"name": "roquest",
-	"tree": { "$path": "out" }
+	"tree": {
+		"$className": "Folder",
+		"out": {
+			"$path": "out"
+		}
+	}
 }

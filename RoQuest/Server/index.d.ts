@@ -34,7 +34,7 @@ interface RoQuestServer {
 	 * @param quests - Array of Quests.
 	 * @param lifeCycles - QuestLifeCycle?
 	 */
-	Init: (quests: Array<Quest>, lifeCycles?: QuestLifeCycle) => void;
+	Init(quests: Array<Quest>, lifeCycles?: QuestLifeCycle): void;
 
 	/** This is a reference to our ObjectiveInfo class. */
 	ObjectiveInfo: ObjectiveInfo;
@@ -332,8 +332,6 @@ interface RoQuestServer {
 
 	/** This is a reference to our Signal class. */
 	QuestStatus: QuestStatus;
-
-	Test: number;
 }
 
 declare const RoQuestServer: RoQuestServer;
