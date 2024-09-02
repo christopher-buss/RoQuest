@@ -18,8 +18,8 @@
 		"Christopher Buss"
 	],
 	"type": "module",
-	"main": "out/init.lua",
-	"types": "out/index.d.ts",
+	"main": "RoQuest/init.lua",
+	"types": "RoQuest/index.d.ts",
 	"files": [
 		"RoQuest/"
 	],
