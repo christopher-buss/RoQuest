@@ -1,6 +1,6 @@
 {
 	"name": "@rbxts/roquest",
-	"version": "0.1.2",
+	"version": "0.1.2-ts.1",
 	"description": "RoQuest is a sophisticated abstract implementation of a Quest System. ",
 	"keywords": [
 		"roblox",
