@@ -1,6 +1,9 @@
 import type ObjectiveInfo from "Shared/Classes/ObjectiveInfo";
 import type { Quest } from "Shared/Classes/Quest";
 import type QuestLifeCycle from "Shared/Classes/QuestLifeCycle";
+import type { QuestAcceptType } from "Shared/Enums/QuestAcceptType";
+import type { QuestDeliverType } from "Shared/Enums/QuestDeliverType";
+import type { QuestRepeatableType } from "Shared/Enums/QuestRepeatableType";
 import type { QuestStatus } from "Shared/Enums/QuestStatus";
 import type { PlayerQuestData } from "Shared/Structs/PlayerQuestData";
 import type Signal from "Vendor/Signal";
@@ -17,6 +20,22 @@ import type Signal from "Vendor/Signal";
  * find a guide to that in the Docs section!
  */
 interface RoQuestServer {
+	/**
+	 * Adds X amount from al the quests that contain the given objective ID.
+	 *
+	 * ```ts
+	 * import { Server } from "@rbxts/ro-quest";
+	 * import { ReplicatedStorage } from "@rbxts/services";
+	 *
+	 * RoQuest.AddObjective(player, "ObjectiveId", 5);
+	 * ```
+	 *
+	 * @param player
+	 * @param objectiveId
+	 * @param amount
+	 */
+	AddObjective(player: Player, objectiveId: string, amount: number): void;
+
 	/**
 	 * This function should only get called once in the server-side. It will
 	 * initialize our quest system and start listening to player events.
@@ -35,6 +54,23 @@ interface RoQuestServer {
 	 * @param lifeCycles - QuestLifeCycle?
 	 */
 	Init(quests: Array<Quest>, lifeCycles?: QuestLifeCycle): void;
+
+	/**
+	 * Loads all the quests and life cycles from the descendants of the
+	 * directory and returns them in an array. The difference from
+	 * :LoadDirectoryDeep and :LoadDirectory is that this one takes all
+	 * descendants into account instead of just the children.
+	 *
+	 * ```ts
+	 * import { ReplicatedStorage } from "@rbxts/services";
+	 * import { RoQuestServer, LoadDirectory } from "@rbxts/roquest";
+	 *
+	 * RoQuestServer.Init(LoadDirectory(ReplicatedStorage.Quests));
+	 * ```
+	 *
+	 * @param directory
+	 */
+	LoadDirectoryDeep(directory: Instance): Array<Quest | QuestLifeCycle>;
 
 	/** This is a reference to our ObjectiveInfo class. */
 	ObjectiveInfo: ObjectiveInfo;

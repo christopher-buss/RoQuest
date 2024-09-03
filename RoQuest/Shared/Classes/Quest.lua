@@ -696,8 +696,4 @@ end
 
 export type Quest = typeof(Quest)
 
-return setmetatable(Quest, {
-    __call = function(_, properties)
-        return Quest.new(properties)
-    end
-})
+return Quest

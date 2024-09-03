@@ -1,6 +1,9 @@
 import type ObjectiveInfo from "Shared/Classes/ObjectiveInfo";
 import type { Quest } from "Shared/Classes/Quest";
 import type QuestLifeCycle from "Shared/Classes/QuestLifeCycle";
+import type { QuestAcceptType } from "Shared/Enums/QuestAcceptType";
+import type { QuestDeliverType } from "Shared/Enums/QuestDeliverType";
+import type { QuestRepeatableType } from "Shared/Enums/QuestRepeatableType";
 import type { QuestStatus } from "Shared/Enums/QuestStatus";
 import type { PlayerQuestData } from "Shared/Structs/PlayerQuestData";
 import type Signal from "Vendor/Signal";

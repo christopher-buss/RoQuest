@@ -23,6 +23,7 @@
 		"downlevelIteration": true,
 		"outDir": "out",
 		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
 		"forceConsistentCasingInFileNames": true
 	},
 	"exclude": ["./eslint.config.ts"]

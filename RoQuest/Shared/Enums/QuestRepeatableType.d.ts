@@ -7,4 +7,4 @@
  * - `NonRepeatable` - The quest can only be completed once.
  * - `Infinite` - This means the quest can be repeated non-stop without any delay.
  */
-type QuestRepeatableType = "Custom" | "Daily" | "Infinite" | "NonRepeatable" | "Weekly";
+export type QuestRepeatableType = "Custom" | "Daily" | "Infinite" | "NonRepeatable" | "Weekly";

@@ -4,4 +4,4 @@
  * - `Automatic` - The quest will automatically be delivered when completed.
  * - `Manual` - It requires to be manually delivered by the developer.
  */
-type QuestDeliverType = "Automatic" | "Manual";
+export type QuestDeliverType = "Automatic" | "Manual";
